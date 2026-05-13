@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrey | Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root { --bg: #020617; }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: var(--bg); 
+            color: #f8fafc; 
+            overflow-x: hidden; 
+        }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .glass { 
+            background: rgba(15, 23, 42, 0.8); 
+            backdrop-filter: blur(12px); 
+            border: 1px solid rgba(255,255,255,0.05); 
+        }
+        .bento-card { 
+            transition: all 0.3s ease-in-out; 
+            border-radius: 1.5rem;
+        }
+        .bento-card:hover { 
+            border-color: #38bdf8; 
+            background: rgba(30, 41, 59, 0.5);
+        }
+        .stat-bar { height: 4px; border-radius: 2px; background: #1e293b; overflow: hidden; }
+        .stat-progress { height: 100%; border-radius: 2px; }
+        
+        @keyframes pulse-soft {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+        .status-dot { animation: pulse-soft 2s infinite; }
+    </style>
+</head>
+<body class="p-6 md:p-12 lg:p-20">
+
+    <main class="max-w-6xl mx-auto space-y-6">
+        
+        <!-- Hero & Skills -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="md:col-span-2 glass p-10 bento-card flex flex-col justify-between min-h-[400px]">
+                <div>
+                    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter mb-4">Andrey.</h1>
+                    <p class="text-2xl text-slate-400 font-medium max-w-lg">
+                        Software Engineer building <span class="text-white font-bold">Scalable Systems</span>, <span class="text-white font-bold">Native Apps</span>, and <span class="text-white font-bold">Cloud Infrastructure</span>.
+                    </p>
+                </div>
+                <div class="flex flex-wrap items-center gap-6 mt-8">
+                    <div class="flex items-center gap-2 text-sm mono text-slate-400"><i data-lucide="map-pin" class="w-4 h-4"></i> Liverpool, UK</div>
+                    <div class="flex items-center gap-2 text-sm mono text-slate-400"><i data-lucide="smartphone" class="w-4 h-4"></i> iOS / Swift</div>
+                    <div class="flex items-center gap-2 text-sm mono text-slate-400"><i data-lucide="graduation-cap" class="w-4 h-4"></i> LJMU Engineering</div>
+                </div>
+            </div>
+
+            <div class="glass p-8 bento-card">
+                <h3 class="mono text-xs font-bold text-slate-500 mb-6 uppercase tracking-[0.2em]">Core Arsenal</h3>
+                <div class="space-y-5">
+                    <div>
+                        <div class="flex justify-between text-sm mb-2 font-semibold"><span>Java / C++</span><span class="text-slate-500">90%</span></div>
+                        <div class="stat-bar"><div class="stat-progress bg-blue-500" style="width: 90%"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-2 font-semibold"><span>Swift / iOS</span><span class="text-slate-500">80%</span></div>
+                        <div class="stat-bar"><div class="stat-progress bg-orange-500" style="width: 80%"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-2 font-semibold"><span>Python / PHP</span><span class="text-slate-500">95%</span></div>
+                        <div class="stat-bar"><div class="stat-progress bg-emerald-500" style="width: 95%"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-2 font-semibold"><span>SQL / Azure</span><span class="text-slate-500">85%</span></div>
+                        <div class="stat-bar"><div class="stat-progress bg-sky-500" style="width: 85%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NEW: System Monitor (Replaces Terminal) -->
+        <div class="glass p-8 bento-card border-t border-t-sky-500/30">
+            <div class="flex items-center justify-between mb-8">
+                <h3 class="mono text-xs font-bold text-slate-500 uppercase tracking-widest">Active Deployments</h3>
+                <div class="flex items-center gap-2 px-3 py-1 bg-emerald-500/10 rounded-full border border-emerald-500/20">
+                    <div class="w-2 h-2 bg-emerald-500 rounded-full status-dot"></div>
+                    <span class="text-[10px] mono text-emerald-500 font-bold uppercase">Systems Nominal</span>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-slate-900/40 p-4 rounded-2xl border border-slate-800/50">
+                    <p class="text-slate-500 text-[10px] mono mb-1 uppercase">Core Application</p>
+                    <p class="text-sm font-bold">Java Engine</p>
+                    <div class="mt-3 text-[10px] text-sky-400 mono">v4.2.0-stable</div>
+                </div>
+                <div class="bg-slate-900/40 p-4 rounded-2xl border border-slate-800/50">
+                    <p class="text-slate-500 text-[10px] mono mb-1 uppercase">Native Mobile</p>
+                    <p class="text-sm font-bold">SwiftUI Suite</p>
+                    <div class="mt-3 text-[10px] text-orange-400 mono">compiled_native</div>
+                </div>
+                <div class="bg-slate-900/40 p-4 rounded-2xl border border-slate-800/50">
+                    <p class="text-slate-500 text-[10px] mono mb-1 uppercase">Cloud Data</p>
+                    <p class="text-sm font-bold">Azure Services</p>
+                    <div class="mt-3 text-[10px] text-emerald-400 mono">region_uk_south</div>
+                </div>
+                <div class="bg-slate-900/40 p-4 rounded-2xl border border-slate-800/50">
+                    <p class="text-slate-500 text-[10px] mono mb-1 uppercase">Automation</p>
+                    <p class="text-sm font-bold">Python Scripts</p>
+                    <div class="mt-3 text-[10px] text-purple-400 mono">active_worker</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="glass p-10 bento-card border border-slate-800">
+            <h3 class="text-2xl font-bold mb-8">Get in Touch</h3>
+            <form action="https://formspree.io/f/mrejdcee" method="POST" class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" name="name" placeholder="Name" required
+                           class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-sky-500 transition">
+                    <input type="email" name="email" placeholder="Email" required
+                           class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-sky-500 transition">
+                </div>
+                <textarea name="message" placeholder="Message" rows="4" required
+                          class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-sky-500 transition"></textarea>
+                <button type="submit" 
+                        class="w-full bg-white text-black py-3 rounded-xl font-bold hover:bg-sky-500 hover:text-white transition duration-300">
+                    Send Message
+                </button>
+            </form>
+        </div>
+
+    </main>
+
+    <footer class="mt-20 mb-10 text-center text-slate-600 text-xs mono uppercase tracking-widest">
+        &copy; 2026 Engineering Portfolio / Built on M4
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
